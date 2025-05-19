@@ -1,21 +1,13 @@
 #include "IPluginCallbacks.h"
 #include "../../interfaces.h"
 #include "../../Northstar.h"
-#include <stdio.h>
+#include "../../../CppPluginExample.h"
 #include <string>
 
 class CPluginCallbacks : public IPluginCallbacks
 {
 	void Init(HMODULE northstarModule, const PluginNorthstarData* initData, bool reloaded) {
-		if (!InitNSSys(northstarModule))
-		{
-			// could not get the NSSys interface
-			// (something went very wrong or the installed Northstar version is very old)
-			printf("could not initialize NSSys");
-			return;
-		}
-
-		g_nssys->Log(0, LogLevel::INFO, "Hello World");
+		InitCppExamplePlugin(initData->pluginHandle, northstarModule);
 	}
 
 	void OnLibraryLoaded(HMODULE module, const char* name) {

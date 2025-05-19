@@ -15,7 +15,7 @@ add_library(
 	"src/interfaces/exposed/IPluginCallbacks/IPluginCallbacks.h"
 	"src/interfaces/exposed/IPluginCallbacks/IPluginCallbacks.cpp"
 	"src/interfaces/Northstar/INSSys.h"
-)
+	"src/CppPluginExample.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CppPluginExample PROPERTY CXX_STANDARD 20)
