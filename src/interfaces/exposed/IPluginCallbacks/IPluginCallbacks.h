@@ -1,5 +1,5 @@
 #pragma once
-#include <Windows.h>
+#include <windows.h>
 
 #define PLUGIN_CALLBACKS_VERSION "PluginCallbacks001"
 

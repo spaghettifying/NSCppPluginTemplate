@@ -1,5 +1,5 @@
 #include "IPluginId.h"
-#include "../../interfaces.h";
+#include "../../interfaces.h"
 #include "../../../PluginConfiguration.h"
 
 class CPluginId : public IPluginId
