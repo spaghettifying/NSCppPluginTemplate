@@ -1,4 +1,4 @@
-﻿cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required (VERSION 3.10)
 
 project ("CppPluginExample")
 
@@ -19,6 +19,14 @@ add_library(
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CppPluginExample PROPERTY CXX_STANDARD 20)
+endif()
+
+# Static linking to avoid dependency issues
+if(WIN32)
+  target_link_libraries(CppPluginExample -static-libgcc -static-libstdc++)
+  set_target_properties(CppPluginExample PROPERTIES
+    LINK_FLAGS "-static -static-libgcc -static-libstdc++"
+  )
 endif()
 
 # TODO: Add tests and install targets if needed.

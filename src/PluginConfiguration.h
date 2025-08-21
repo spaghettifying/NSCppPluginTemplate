@@ -31,4 +31,4 @@ struct Color
 #define PLUGIN_DEPENDENCY_NAME "CPP_EXAMPLE_PLUGIN"
 
 // this is a bitfield that determines if Northstar should load this plugin
-#define PLUGIN_CONTEXT PLUGIN_CONTEXT_DEDICATED | PLUGIN_CONTEXT_CLIENT;
+#define PLUGIN_CONTEXT PLUGIN_CONTEXT_CLIENT;
